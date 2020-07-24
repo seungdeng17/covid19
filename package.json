@@ -15,13 +15,15 @@
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
+    "request": "^2.88.2",
     "styled-components": "^5.1.1",
-    "styled-reset": "^4.2.0"
+    "styled-reset": "^4.2.0",
+    "xml-js": "^1.6.11"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,5 +43,6 @@
   },
   "devDependencies": {
     "craco-alias": "^2.1.1"
-  }
+  },
+  "proxy": "http://openapi.data.go.kr"
 }
