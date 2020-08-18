@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const NavSubMenuWarp = styled.div`
-  position: absolute;
+  position: fixed;
   z-index: 10;
-  top: 60px;
+  top: 123px;
   left: 0;
   width: 100%;
   background-color: #fff;
-
   overflow: hidden;
   animation-name: subMenu;
   animation-duration: 0.5s;
