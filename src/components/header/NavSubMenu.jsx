@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const NavSubMenuWarp = styled.div`
@@ -37,17 +38,19 @@ const SubMenuList = styled.ul`
 `;
 
 const SubMenu = styled.li`
-  display: block;
-  font-size: 15px;
-  line-height: 21px;
-  font-weight: 500;
-  letter-spacing: -0.064em;
-  color: #fff;
-  padding: 8px 16px;
   margin: 8px;
-  width: 180px;
   background-color: #13669b;
   cursor: pointer;
+  .title-text {
+    display: block;
+    width: 180px;
+    padding: 8px 16px;
+    line-height: 21px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -0.064em;
+    color: #fff;
+  }
   :hover {
     background-color: #008bb8;
   }
@@ -55,7 +58,13 @@ const SubMenu = styled.li`
 
 const NavSubMenu = ({ subMenus, handleMouseEnter }) => {
   const subMenuList = subMenus.map((data) => {
-    return <SubMenu key={data.title}>{data.title}</SubMenu>;
+    return (
+      <SubMenu key={data.title}>
+        <Link className="title-text" to={data.link}>
+          {data.title}
+        </Link>
+      </SubMenu>
+    );
   });
 
   return (
